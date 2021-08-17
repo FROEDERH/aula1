@@ -13,7 +13,7 @@ export default function Home() {
           <div>Ouro</div>
           <div>Prata</div>
           <div>Bronze</div>
-          <div>Total</div>
+          <div>Total</div >
         </div>
         {dados.map(item => {
           return <RankItem item={item} />;
