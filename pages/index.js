@@ -12,7 +12,7 @@ export default function Home() {
        setList(filterList);
      }
 
-     function handleFilterByGold(){
+     function handleClearFilter(){
        setList(dados);
      }
      
@@ -21,7 +21,7 @@ export default function Home() {
       <h1>Quadro de medalhas - Tokio 2020 </h1>
       <div>
         <button onClick={handleFilterByGold}>Somente com ouro</button>
-        <button>Todos</button>
+        <button onClick={handleClearFilter}>Todos</button>
          </div>
       <div>Resultado: {list.length} itens</div>
       <div>
