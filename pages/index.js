@@ -16,7 +16,7 @@ export default function Home() {
     <div>
       <h1>Quadro de medalhas - Tokio 2020 </h1>
       <div>
-        <button onClick={handleFilterByGold}>Somente com ouro</button >
+        <button onClick={handleFilterByGold}>Somente com ouro</button>
         <button>Todos</button>
          </div>
       <div>Resultado: {list.length} itens</div>
