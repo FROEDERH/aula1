@@ -9,7 +9,7 @@ export default function RankItem(props) {
         <img
           src={`https://olympics.com/tokyo-2020/olympic-games/resCOMMON/img/flags/${
             props.item.NOC
-          } .png`}
+          }.png`}
         />
         {/* <img src="https://www.countryflags.io/br/flat/64.png" /> */}
 
