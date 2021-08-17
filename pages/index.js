@@ -1,8 +1,12 @@
+import react, { useState } from 'react';
 import RankItem from '../componentes/RankItem';
 import dados from './dados.json';
 import styles from './index.module.css';
 
 export default function Home() {
+
+     const [list, setList] = useState(dados);
+
   return (
     <div>
       <h1>Quadro de medalhas - Tokio 2020 </h1>
@@ -15,7 +19,7 @@ export default function Home() {
           <div>Bronze</div>
           <div>Total</div >
         </div>
-        {dados.map(item => {
+        {list.map(item => {
           return <RankItem item={item} />;
         })}
       </div>
