@@ -32,7 +32,7 @@ export default function Home() {
       <div>
         <button onClick={handleFilterByGold}>Somente com Ouro</button>
         <button onClick={handleFilterBySilver}>Somente com Prata</button>
-        <button onClick={handleFilterByBronze}>Somente com Bronze</button>
+        <button onClick={handleFilterByBronze}>Somente com Bronze </button>
         <button onClick={handleClearFilter}>Todos</button>
          </div>
       <div>Resultado: {list.length} itens</div>
