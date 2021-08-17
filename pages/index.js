@@ -8,17 +8,17 @@ export default function Home() {
      const [list, setList] = useState(dados);
 
      function handleFilterByGold(){
-       const filterList = [...list].filter(item => item.GoldMedals > 0);
+       const filterList = [...dados].filter(item => item.GoldMedals > 0);
        setList(filterList);
      }
 
      function handleFilterBySilver(){
-      const filterList = [...list].filter(item => item.SilverMedals > 0);
+      const filterList = [...dados].filter(item => item.SilverMedals > 0);
       setList(filterList);
     }
 
     function handleFilterByBronze(){
-      const filterList = [...list].filter(item => item.BronzeMedals > 0);
+      const filterList = [...dados].filter(item => item.BronzeMedals > 0);
       setList(filterList);
     }
 
