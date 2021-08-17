@@ -8,7 +8,7 @@ export default function Home() {
      const [list, setList] = useState(dados);
 
      function handleFilterByGold(){
-       const filterList = [...list].filter(item => item.GoldMadals > 0);
+       const filterList = [...list].filter(item => item.GoldMedals > 0);
        setList(filterList);
      }
      
@@ -16,7 +16,7 @@ export default function Home() {
     <div>
       <h1>Quadro de medalhas - Tokio 2020 </h1>
       <div>
-        <button onClick={handleFilterByGold}>Somente com ouro</button>
+        <button onClick={handleFilterByGold}>Somente com ouro</button >
         <button>Todos</button>
          </div>
       <div>Resultado: {list.length} itens</div>
