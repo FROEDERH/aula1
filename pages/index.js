@@ -26,10 +26,20 @@ export default function Home() {
        setList(dados);
      }
 
-     function handleSortByBronzeMedals (){
-       const sortedList = [...list].sort((a, b) => a.BronzeMedals - b.BronzeMedals);
+     function handleSortByGoldMedals (){
+       const sortedList = [...list].sort((a, b) => a.GoldMedals - b.GoldMedals);
        setList(sortedList);
      }
+
+     function handleSortBySilverMedals (){
+      const sortedList = [...list].sort((a, b) => a.SilverMedals - b.SilverMedals);
+      setList(sortedList);
+    }
+
+    function handleSortByBronzeMedals (){
+      const sortedList = [...list].sort((a, b) => a.BronzeMedals - b.BronzeMedals);
+      setList(sortedList);
+    }
      
   return (
     <div>
@@ -45,8 +55,8 @@ export default function Home() {
         <div className={styles.header}>
           <div>#</div>
           <div>Time</div>
-          <div>Ouro</div>
-          <div>Prata</div>
+          <div onClick={handleSortByGoldMedals}>Ouro</div>
+          <div onClick={handleSortBySilverMedals}>Prata</div>
           <div onClick={handleSortByBronzeMedals}>Bronze</div>
           <div>Total</div>
         </div>
