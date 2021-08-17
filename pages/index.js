@@ -6,10 +6,14 @@ import styles from './index.module.css';
 export default function Home() {
 
      const [list, setList] = useState(dados);
-
+      
   return (
     <div>
       <h1>Quadro de medalhas - Tokio 2020 </h1>
+      <div>
+        <button>Somente com ouro</button>
+        <button>Todos</button>
+         </div>
       <div>Resultado: {list.length} itens</div>
       <div>
         <div className={styles.header}>
