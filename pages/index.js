@@ -12,13 +12,13 @@ export default function Home() {
        setList(filterList);
      }
 
-     function handleFilterBy(){
-      const filterList = [...list].filter(item => item.GoldMedals > 0);
+     function handleFilterBySilver(){
+      const filterList = [...list].filter(item => item.SilverMedals > 0);
       setList(filterList);
     }
 
     function handleFilterByBronze(){
-      const filterList = [...list].filter(item => item.GoldMedals > 0);
+      const filterList = [...list].filter(item => item.BronzeMedals > 0);
       setList(filterList);
     }
 
@@ -30,7 +30,9 @@ export default function Home() {
     <div>
       <h1>Quadro de medalhas - Tokio 2020 </h1>
       <div>
-        <button onClick={handleFilterByGold}>Somente com ouro</button>
+        <button onClick={handleFilterByGold}>Somente com Ouro</button>
+        <button onClick={handleFilterBySilver}>Somente com Prata</button>
+        <button onClick={handleFilterByBronze}>Somente com Bronze</button>
         <button onClick={handleClearFilter}>Todos</button>
          </div>
       <div>Resultado: {list.length} itens</div>
