@@ -6,7 +6,11 @@ import styles from './index.module.css';
 export default function Home() {
 
      const [list, setList] = useState(dados);
-      
+
+     function handleFilterByGold(){
+       const filterList = [...list].filter(item => item.GoldMadals > 0);
+     }
+     
   return (
     <div>
       <h1>Quadro de medalhas - Tokio 2020 </h1>
