@@ -25,6 +25,11 @@ export default function Home() {
      function handleClearFilter(){
        setList(dados);
      }
+
+     function handleSortByBronzeMedals (){
+       const sortedList = [...list].sort((a, b) => a.BronzeMedals - b.BronzeMedals);
+       setList(sortedList);
+     }
      
   return (
     <div>
@@ -42,7 +47,7 @@ export default function Home() {
           <div>Time</div>
           <div>Ouro</div>
           <div>Prata</div>
-          <div>Bronze</div>
+          <div onClick={handleSortByBronzeMedals}>Bronze</div>
           <div>Total</div>
         </div>
         {list.map(item => {
