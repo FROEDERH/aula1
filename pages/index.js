@@ -11,6 +11,10 @@ export default function Home() {
        const filterList = [...list].filter(item => item.GoldMedals > 0);
        setList(filterList);
      }
+
+     function handleFilterByGold(){
+       setList(dados);
+     }
      
   return (
     <div>
