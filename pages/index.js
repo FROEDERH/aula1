@@ -12,6 +12,16 @@ export default function Home() {
        setList(filterList);
      }
 
+     function handleFilterBy(){
+      const filterList = [...list].filter(item => item.GoldMedals > 0);
+      setList(filterList);
+    }
+
+    function handleFilterByBronze(){
+      const filterList = [...list].filter(item => item.GoldMedals > 0);
+      setList(filterList);
+    }
+
      function handleClearFilter(){
        setList(dados);
      }
