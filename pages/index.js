@@ -10,6 +10,7 @@ export default function Home() {
   return (
     <div>
       <h1>Quadro de medalhas - Tokio 2020 </h1>
+      <div>Resultado: {list.length} itens</div>
       <div>
         <div className={styles.header}>
           <div>#</div>
@@ -17,7 +18,7 @@ export default function Home() {
           <div>Ouro</div>
           <div>Prata</div>
           <div>Bronze</div>
-          <div>Total</div >
+          <div>Total</div>
         </div>
         {list.map(item => {
           return <RankItem item={item} />;
