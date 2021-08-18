@@ -1,10 +1,16 @@
 import styles from './RankItem.module.css';
 export default function RankItem(props) {
   return (
-    <div className={styles.item}>
+    <div className={props.theme == 'dark' ? styles.itemDark : styles.itemLight}>
+
+      
         <div className={styles.rank}>
       <div>{props.item.Rank}</div>
        </div>
+
+
+
+       
       <div className={styles.contry}>
         <img
           src={`https://olympics.com/tokyo-2020/olympic-games/resCOMMON/img/flags/${

@@ -7,6 +7,7 @@ export default function Home() {
 
      const [list, setList] = useState(dados);
      const [count, setCount] = useState (0);
+     const [theme, setTheme] = useState('ligth');
 
      useEffect (() => {
        setCount(count + 1);
@@ -56,6 +57,8 @@ export default function Home() {
         <button onClick={handleFilterBySilver}>Somente com Prata</button>
         <button onClick={handleFilterByBronze}>Somente com Bronze </button>
         <button onClick={handleClearFilter}>Todos</button>
+        <button onClick={}>Tema Dark</button>
+        <button onClick={}>Tema Branco</button>
          </div>
       <div>Resultado: {list.length} itens ({count})</div>
       <div>
@@ -68,7 +71,7 @@ export default function Home() {
           <div>Total</div>
         </div>
         {list.map(item => {
-          return <RankItem item={item} />;
+          return <RankItem theme={theme} item={item} />;
         })}
       </div>
     </div>
