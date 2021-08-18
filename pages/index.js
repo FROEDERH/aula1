@@ -1,4 +1,4 @@
-import react, { useState } from 'react';
+import react, { useState, useEffect } from 'react';
 import RankItem from '../componentes/RankItem';
 import dados from './dados.json';
 import styles from './index.module.css';
@@ -6,6 +6,11 @@ import styles from './index.module.css';
 export default function Home() {
 
      const [list, setList] = useState(dados);
+     const [count, setCount] = useState (0);
+
+     useEffect (() => {
+       setCount(count + 1);
+     }, [list]);
 
      function handleFilterByGold(){
        const filterList = [...dados].filter(item => item.GoldMedals > 0);
@@ -40,6 +45,8 @@ export default function Home() {
       const sortedList = [...list].sort((a, b) => a.BronzeMedals - b.BronzeMedals);
       setList(sortedList);
     }
+
+  
      
   return (
     <div>
@@ -50,7 +57,7 @@ export default function Home() {
         <button onClick={handleFilterByBronze}>Somente com Bronze </button>
         <button onClick={handleClearFilter}>Todos</button>
          </div>
-      <div>Resultado: {list.length} itens</div>
+      <div>Resultado: {list.length} itens ({count})</div>
       <div>
         <div className={styles.header}>
           <div>#</div>
